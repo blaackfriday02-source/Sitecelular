@@ -58,15 +58,17 @@
       function gtag(){ dataLayer.push(arguments); }
       window.gtag=gtag; gtag('js', new Date()); gtag('config', id, {send_page_view:false});
     }
-
+    
     function loadMarketingPixelsIfConsented(){
-      if(getCookieConsent()!=='marketing') return;
-      // >>> Troque quando for ativar:
-      var META_PIXEL_ID = 'SEU_META_PIXEL_ID';   // ex: 123456789012345
-      var GA4_ID        = 'G-SEU-GA4-ID';        // ex: G-ABCDEF1234
-      loadMetaPixel(META_PIXEL_ID);
-      loadGtag(GA4_ID);
-    }
+  if(getCookieConsent()!=='marketing') return;
+
+  var META_PIXEL_ID = '1177612461012021';
+  var GA4_ID        = 'G-R9S7XQ1S5B';
+
+  loadMetaPixel(META_PIXEL_ID);
+  loadGtag(GA4_ID);
+}
+
 
     document.addEventListener('DOMContentLoaded', function(){
       if(getCookieConsent()==='marketing') loadMarketingPixelsIfConsented();
